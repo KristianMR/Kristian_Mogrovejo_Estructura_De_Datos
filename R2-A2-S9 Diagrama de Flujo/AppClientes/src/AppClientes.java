@@ -7,6 +7,7 @@ public class AppClientes {
         int opcion;
 
         do {
+            System.out.println("__________Menú__________");
             System.out.println("1. Insertar cliente");
             System.out.println("2. Listar clientes de izquierda a derecha");
             System.out.println("3. Listar clientes de derecha a izquierda");
