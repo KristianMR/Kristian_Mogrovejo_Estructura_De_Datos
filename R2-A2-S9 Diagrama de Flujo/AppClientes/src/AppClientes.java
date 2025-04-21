@@ -7,7 +7,7 @@ public class AppClientes {
         int opcion;
 
         do {
-            System.out.println("__________Menú__________");
+            System.out.println("\n__________Menú__________");
             System.out.println("1. Insertar cliente");
             System.out.println("2. Listar clientes de izquierda a derecha");
             System.out.println("3. Listar clientes de derecha a izquierda");
@@ -17,7 +17,7 @@ public class AppClientes {
 
             switch (opcion) {
                 case 1:
-                    System.out.print("Ingrese la cédula del cliente: ");
+                    System.out.print("\nIngrese la cédula del cliente: ");
                     int cedula = scanner.nextInt();
                     scanner.nextLine(); // Limpiar el buffer
                     System.out.print("Ingrese el nombre del cliente: ");
@@ -26,9 +26,11 @@ public class AppClientes {
                     lista.InsertarOrdenado(cliente);
                     break;
                 case 2:
+                System.out.println("\nClientes de izquierda a derecha:");
                     lista.ListarIzquierdaDerecha();
                     break;
                 case 3:
+                System.out.println("\nClientes de derecha a izquierda:");
                     lista.ListarDerechaIzquierda();
                     break;
                 case 4:
