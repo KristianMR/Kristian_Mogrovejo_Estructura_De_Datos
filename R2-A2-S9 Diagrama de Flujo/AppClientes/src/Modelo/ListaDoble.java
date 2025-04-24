@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class ListaDoble {
     private Nodo inicio;
 
-    public void Insertar(String Datos){
-        Nodo nuevo = new Nodo(Datos);
+    public void Insertar(Cliente cliente){
+        Nodo nuevo = new Nodo(cliente);
         if(inicio == null){
             inicio = nuevo;
         }else{
@@ -23,7 +23,7 @@ public class ListaDoble {
         ArrayList<String> Lista = new ArrayList<>();
         Nodo actual = inicio;
         while(actual != null){
-            Lista.add(actual.getDatos());
+            Lista.add(actual.getDatos().toString());
             actual = actual.getSiguiente();
         }
         return Lista;
