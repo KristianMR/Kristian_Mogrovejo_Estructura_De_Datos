@@ -14,7 +14,7 @@ public class ListaDoble {
             while(actual.getSiguiente() != null){
                 actual = actual.getSiguiente();
             }
-            actual.setSiguiente(actual);
+            actual.setSiguiente(nuevo);
             nuevo.setAnterior(actual);
         }
     }
