@@ -12,7 +12,7 @@ public class Vista extends JFrame {
 
     public Vista() {
         setTitle("Gestión de Clientes");
-        setSize(400, 300);
+        setSize(450, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new FlowLayout());
 
