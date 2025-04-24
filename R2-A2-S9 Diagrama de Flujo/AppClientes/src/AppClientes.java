@@ -1,4 +1,4 @@
-import java.util.Scanner;
+/*import java.util.Scanner;
 
 public class AppClientes {
     public static void main(String[] args) throws Exception {
@@ -41,4 +41,4 @@ public class AppClientes {
             }
         } while (opcion != 4);
     }
-}
+} */
