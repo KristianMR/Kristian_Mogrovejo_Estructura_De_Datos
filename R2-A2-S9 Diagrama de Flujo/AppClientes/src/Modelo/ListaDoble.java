@@ -12,7 +12,7 @@ public class ListaDoble {
         }else{
             Nodo actual = inicio;
             while(actual.getSiguiente() != null){
-                actual = actual.getSiguiente()
+                actual = actual.getSiguiente();
             }
             actual.setSiguiente(actual);
             nuevo.setAnterior(actual);
