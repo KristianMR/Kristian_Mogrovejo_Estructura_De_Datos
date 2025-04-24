@@ -1,19 +1,16 @@
 package Modelo;
 
 public class Nodo {
-    private String Datos;
+    private Cliente Datos;
     private Nodo Siguiente;
     private Nodo Anterior;
 
-    public Nodo(String Datos){
+    public Nodo(Cliente Datos){
         this.Datos = Datos;
     }
 
-    public String getDatos(){
+    public Cliente getDatos(){
         return Datos;
-    }
-    public void setDatos(String Datos){
-        this.Datos = Datos;
     }
 
     public Nodo getSiguiente(){
