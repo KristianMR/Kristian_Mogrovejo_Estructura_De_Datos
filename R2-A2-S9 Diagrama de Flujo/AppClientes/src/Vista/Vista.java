@@ -6,6 +6,8 @@ import java.awt.*;
 public class Vista extends JFrame {
     public JTextField txtCedula, txtNombre;
     public JButton btnAgregar;
+    public JButton btnListarIzqDer;
+    public JButton btnListarDerIzq;
     public JTextArea areaClientes;
 
     public Vista() {
@@ -24,6 +26,12 @@ public class Vista extends JFrame {
 
         btnAgregar = new JButton("Agregar");
         add(btnAgregar);
+
+        btnListarIzqDer = new JButton("Listar →");
+        add(btnListarIzqDer);
+
+        btnListarDerIzq = new JButton("Listar ←");
+        add(btnListarDerIzq);
 
         areaClientes = new JTextArea(10, 30);
         areaClientes.setEditable(false);
