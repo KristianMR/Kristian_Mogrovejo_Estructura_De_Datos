@@ -2,49 +2,33 @@ package Vista;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.List;
 
 public class Vista extends JFrame {
-    private JTextField campoTexto;
-    private JButton botonAgregar;
-    private DefaultListModel<String> modeloLista;
-    private JList<String> lista;
+    public JTextField txtCedula, txtNombre;
+    public JButton btnAgregar;
+    public JTextArea areaClientes;
 
     public Vista() {
-        setTitle("Lista Doble Enlazada - MVC");
+        setTitle("Gestión de Clientes");
         setSize(400, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new FlowLayout());
 
-        campoTexto = new JTextField(20);
-        botonAgregar = new JButton("Agregar");
+        add(new JLabel("Cédula:"));
+        txtCedula = new JTextField(10);
+        add(txtCedula);
 
-        modeloLista = new DefaultListModel<>();
-        lista = new JList<>(modeloLista);
+        add(new JLabel("Nombre:"));
+        txtNombre = new JTextField(10);
+        add(txtNombre);
 
-        JPanel panel = new JPanel();
-        panel.add(campoTexto);
-        panel.add(botonAgregar);
+        btnAgregar = new JButton("Agregar");
+        add(btnAgregar);
 
-        add(panel, BorderLayout.NORTH);
-        add(new JScrollPane(lista), BorderLayout.CENTER);
-    }
+        areaClientes = new JTextArea(10, 30);
+        areaClientes.setEditable(false);
+        add(new JScrollPane(areaClientes));
 
-    public String getTexto() {
-        return campoTexto.getText();
-    }
-
-    public void limpiarCampo() {
-        campoTexto.setText("");
-    }
-
-    public void actualizarLista(List<String> elementos) {
-        modeloLista.clear();
-        for (String e : elementos) {
-            modeloLista.addElement(e);
-        }
-    }
-
-    public JButton getBotonAgregar() {
-        return botonAgregar;
+        setVisible(true);
     }
 }
