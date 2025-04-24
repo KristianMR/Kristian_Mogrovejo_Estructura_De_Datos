@@ -1,4 +1,4 @@
-public class Nodo {
+/*public class Nodo {
     Cliente cliente;
     Nodo siguiente;
     Nodo anterior;
@@ -9,4 +9,4 @@ public class Nodo {
         this.anterior = null;
     }
     
-}
+}*/
