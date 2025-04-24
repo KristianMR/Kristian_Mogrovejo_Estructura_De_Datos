@@ -1,4 +1,4 @@
-public class ListaDoble {
+/*public class ListaDoble {
     private Nodo cabeza;
 
     //ordenado por cedula
@@ -45,4 +45,4 @@ public class ListaDoble {
             actual = actual.anterior;
         }
     }
-}
+}*/
