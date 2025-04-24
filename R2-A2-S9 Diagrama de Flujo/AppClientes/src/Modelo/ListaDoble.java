@@ -28,4 +28,22 @@ public class ListaDoble {
         }
         return Lista;
     }
+
+    public ArrayList<String> listarReversa() {
+        ArrayList<String> lista = new ArrayList<>();
+        Nodo actual = inicio;
+    
+        // Navegar hasta el final
+        while (actual != null && actual.getSiguiente() != null) {
+            actual = actual.getSiguiente();
+        }
+    
+        // Ahora vamos hacia atrás
+        while (actual != null) {
+            lista.add(actual.getDatos().toString());
+            actual = actual.getAnterior();
+        }
+    
+        return lista;
+    }
 }
