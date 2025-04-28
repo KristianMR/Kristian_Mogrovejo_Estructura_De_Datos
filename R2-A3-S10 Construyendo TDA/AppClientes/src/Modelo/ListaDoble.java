@@ -1,6 +1,7 @@
 package Modelo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ListaDoble {
     private Nodo inicio;
@@ -26,6 +27,7 @@ public class ListaDoble {
             Lista.add(actual.getDatos().toString());
             actual = actual.getSiguiente();
         }
+        Collections.sort(Lista);
         return Lista;
     }
 
@@ -44,6 +46,7 @@ public class ListaDoble {
             actual = actual.getAnterior();
         }
     
+        Collections.sort(lista, Collections.reverseOrder());
         return lista;
     }
 }
