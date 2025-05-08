@@ -21,5 +21,3 @@ public class cliente {
         return cedula;
     }
 }
-
-
