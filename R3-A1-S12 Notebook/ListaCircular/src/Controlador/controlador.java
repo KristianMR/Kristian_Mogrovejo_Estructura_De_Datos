@@ -13,30 +13,36 @@ public class controlador {
         this.vista = vista;
     }
 
-    public void Iniciar(){
-
+    public void Iniciar() {
         int opcion;
 
-        do{
-
+        do {
             opcion = vista.MostrarMenu();
 
-            switch(opcion){
+            switch (opcion) {
                 case 1:
-                    String nombre = vista.PedirNombre();
-                    String cedula = vista.PedirCedula();
+                    String nombre = vista.pedirNombre();
+                    if (nombre == null || nombre.isBlank()) break;
+                    String cedula = vista.pedirCedula();
+                    if (cedula == null || cedula.isBlank()) break;
                     lista.InsertarCliente(nombre, cedula);
+                    vista.mostrarMensaje("Cliente insertado correctamente.");
                     break;
                 case 2:
-                    String clientes = lista.ListarClientes();
-                    vista.MostrarClientes(clientes);
+                    String[][] datos = lista.obtenerClientes();
+                    if (datos.length == 0) {
+                        vista.mostrarMensaje("La lista está vacía.");
+                    } else {
+                        vista.mostrarTabla(datos, new String[] { "Nombre", "Cédula" });
+                    }
                     break;
                 case 3:
-                    vista.MostrarMensaje("Saliendo...");
+                    vista.mostrarMensaje("Saliendo...");
                     break;
                 default:
-                    vista.MostrarMensaje("Opción no válida. Intente de nuevo.");
+                    vista.mostrarMensaje("Opción inválida.");
             }
-        }while(opcion != 3);
+
+        } while (opcion != 3);
     }
 }
