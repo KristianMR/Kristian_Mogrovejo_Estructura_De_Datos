@@ -32,4 +32,31 @@ public class ListaCircular {
 
         return sb.toString();
     }
+
+    public String[][] obtenerClientes() {
+        if (inicio == null) return new String[0][0];
+
+        int cantidad = ContarClientes();
+        String[][] datos = new String[cantidad][2];
+        cliente actual = inicio.siguiente;
+
+        for (int i = 0; i < cantidad; i++) {
+            datos[i][0] = actual.getNombre();
+            datos[i][1] = actual.getCedula();
+            actual = actual.siguiente;
+        }
+
+        return datos;
+    }
+
+    private int ContarClientes() {
+        if (inicio == null) return 0;
+        int count = 0;
+        cliente actual = inicio.siguiente;
+        do {
+            count++;
+            actual = actual.siguiente;
+        } while (actual != inicio.siguiente);
+        return count;
+    }
 }
