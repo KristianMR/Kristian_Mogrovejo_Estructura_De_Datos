@@ -9,7 +9,7 @@ public class Controlador {
 
     // Constructor que recibe una vista
     public Controlador(Vista vista) {
-        this.vista = vista;
+        Controlador.vista = vista;
     }
 
     // Lógica principal del programa, ciclo de menú
@@ -29,7 +29,7 @@ public class Controlador {
                     }
                     case 2 -> {
                         Orden.Secuencial(arreglo);
-                        vista.mostrarArreglo(arreglo, "Método Selección");
+                        vista.mostrarArreglo(arreglo, "Método Secuencial");
                     }
                     case 3 -> {
                         Orden.Quicksort(arreglo, 0, arreglo.length - 1);
