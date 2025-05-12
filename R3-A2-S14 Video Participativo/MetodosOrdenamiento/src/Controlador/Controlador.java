@@ -5,7 +5,7 @@ import Vista.Vista;
 
 public class Controlador {
     
-    private Vista vista;
+    private static Vista vista;
 
     // Constructor que recibe una vista
     public Controlador(Vista vista) {
@@ -13,7 +13,7 @@ public class Controlador {
     }
 
     // Lógica principal del programa, ciclo de menú
-    public void iniciar() {
+    public static void iniciar() {
         int opcion;
         do {
             opcion = vista.mostrarMenu();
