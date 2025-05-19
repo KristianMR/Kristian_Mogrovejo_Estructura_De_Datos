@@ -2,6 +2,7 @@ package Controller;
 
 import Model.hanoiModel;
 import View.hanoiView;
+import View.hanoiAnimation;
 
 public class hanoiController {
     
@@ -17,5 +18,8 @@ public class hanoiController {
         int numberOfDisks = view.getNumberOfDisks();
         model.solve(numberOfDisks, 'A', 'B', 'C');
         view.showMoves(model.getMoves());
+
+        new hanoiAnimation(numberOfDisks, model.getMoves());
     }
+
 }
