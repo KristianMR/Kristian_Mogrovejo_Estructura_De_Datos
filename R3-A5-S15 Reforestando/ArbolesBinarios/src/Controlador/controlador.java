@@ -3,14 +3,14 @@ package Controlador;
 import Modelo.*;
 import Vista.*;
 
-public class Controlador {
+public class controlador {
     private ArbolBinario arbol; // Instancia del árbol binario
     private VistaConsola vista; // Instancia de la vista de consola
 
     // Constructor para inicializar el controlador con el árbol y la vista
-    public Controlador(ArbolBinario arbol, VistaConsola vista) {
-        this.arbol = arbol;
-        this.vista = vista;
+    public controlador() {
+        arbol = new ArbolBinario(); // Crea una nueva instancia del árbol binario
+        vista = new VistaConsola(); // Crea una nueva instancia de la vista de consola        
     }
 
     // Método para iniciar el controlador y manejar la interacción con el usuario
